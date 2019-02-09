@@ -19,8 +19,8 @@ func TestFindMatchPathes(t *testing.T) {
 		Expects []string
 	}{
 		{Path: "./testdata", Expects: []string{"./testdata"}},
-		{Path: "./testdata/*", Expects: []string{"./testdata/subdir1", "./testdata/subdir2"}},
-		{Path: "./testdata/**/*", Expects: []string{"./testdata/subdir1", "./testdata/subdir1/.seacret", "./testdata/subdir1/test.txt", "./testdata/subdir2"}},
+		{Path: "./testdata/*", Expects: []string{"./testdata/subdir1"}},
+		{Path: "./testdata/**/*", Expects: []string{"./testdata/subdir1", "./testdata/subdir1/.seacret", "./testdata/subdir1/test.txt"}},
 	}
 
 	for _, testdata := range testdatas {
