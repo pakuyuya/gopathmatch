@@ -21,7 +21,7 @@ func MatchPathes(path string, flg int) []string {
 	}
 
 	basepath := "."
-	if filepath.IsAbs(path) || path[0] == '/' {
+	if filepath.IsAbs(path) || strings.Index(path, "/") == 0 {
 		var pos int
 		basepath, pos = _fetchToken(path)
 		path = path[pos:]
