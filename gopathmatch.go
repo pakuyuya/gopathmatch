@@ -12,7 +12,7 @@ const (
 	FlgFileOnly = 0x01
 )
 
-func MatchPathes(path string, flg int) []string {
+func Listup(path string, flg int) []string {
 	if os.PathSeparator != '/' {
 		path = strings.Replace(path, "\\", "/", -1)
 	}

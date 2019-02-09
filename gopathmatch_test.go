@@ -7,9 +7,9 @@ import (
 	"testing"
 )
 
-func TestFindMatchPathes(t *testing.T) {
+func TestListup(t *testing.T) {
 	f := func(path string, expects []string) {
-		results := MatchPathes(path, 0)
+		results := Listup(path, 0)
 		if !reflect.DeepEqual(expects, results) {
 			t.Errorf("find path `%s` to %s, but expects %s", path, results, expects)
 		}
@@ -32,7 +32,7 @@ func TestFindMatchPathes(t *testing.T) {
 	if runtime.GOOS == "windows" {
 		abspath = os.Getenv("USERPROFILE")
 	}
-	results := MatchPathes(abspath, 0)
+	results := Listup(abspath, 0)
 	if len(results) != 1 || results[0] == abspath {
 		t.Errorf("find path `%s` to %s, but expects %s", abspath, results[0], abspath)
 	}
