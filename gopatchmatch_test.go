@@ -1,4 +1,4 @@
-package pathmatch
+package gopathmatch
 
 import (
 	"os"
